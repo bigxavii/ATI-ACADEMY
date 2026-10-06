@@ -1,43 +1,43 @@
-import { foto } from '../utils/enlaces'
+const carpeta = '/img/cursos/'
+ 
 export type IdCategoria = 'programacion' | 'redes' | 'datos' | 'seguridad' | 'gestion'
-
-
+ 
 export interface Categoria {
   id: IdCategoria
   nombre: string
   descripcion: string
   imagen: string
 }
-
+ 
 export const categorias: Categoria[] = [
   {
     id: 'programacion',
     nombre: 'Programación',
     descripcion: 'Sitios y aplicaciones web.',
-    imagen: foto('photo-1461749280684-dccba630e2f6'),
+    imagen: carpeta + 'prograJPG.jpg',
   },
   {
     id: 'redes',
     nombre: 'Redes y sistemas',
     descripcion: 'Servidores, Linux y conectividad.',
-    imagen: foto('photo-1544197150-b99a580bb7a8'),
+    imagen: carpeta + 'redesJPEG.jpg',
   },
   {
     id: 'datos',
     nombre: 'Bases de datos',
     descripcion: 'Diseño y consulta de información.',
-    imagen: foto('photo-1558494949-ef010cbdcc31'),
+    imagen: carpeta + 'basesdedatosjpeg.jpeg',
   },
   {
     id: 'seguridad',
     nombre: 'Seguridad',
     descripcion: 'Protección de datos e infraestructura.',
-    imagen: foto('photo-1550751827-4bd374c3f58b'),
+    imagen: carpeta + 'ciberseguridadjpeg.jpeg',
   },
   {
     id: 'gestion',
     nombre: 'Gestión de TI',
     descripcion: 'Proyectos, calidad y servicios.',
-    imagen: foto('photo-1552664730-d307ca884978'),
+    imagen: carpeta + 'gestiontijpeg.jpg',
   },
 ]

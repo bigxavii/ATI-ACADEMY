@@ -12,7 +12,7 @@ const enlaceWhatsApp = whatsapp('Hola, quiero información de ATI Academy.')
     <div class="container cols">
       <div class="marca">
         <RouterLink to="/" class="logo">
-          <img src="/logo.svg" alt="Logo de ATI Academy" width="32" height="32" />
+          <img src="/img/cursos/atilogopng.png" alt="Logo de ATI Academy" width="36" height="36" />
           <span>ATI Academy</span>
         </RouterLink>
         <p>Cursos en línea de tecnología para la Sociedad de la Información.</p>

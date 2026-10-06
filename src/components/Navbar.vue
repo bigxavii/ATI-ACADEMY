@@ -15,7 +15,7 @@ const cerrar = () => {
   <header class="navbar">
     <nav class="container barra">
       <RouterLink to="/" class="logo" @click="cerrar">
-        <img src="/logo.svg" alt="Logo de ATI Academy" width="34" height="34" />
+        <img src="/img/cursos/atilogopng.png" alt="Logo de ATI Academy" width="36" height="36" />
         <span>ATI Academy</span>
       </RouterLink>
 

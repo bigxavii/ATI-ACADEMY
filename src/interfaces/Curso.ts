@@ -1,8 +1,8 @@
 import type { IdCategoria } from './Categoria'
 import type { Material } from './Material'
-import { foto, avatar, videoEnYoutube } from '../utils/enlaces'
+import { avatar, videoEnYoutube } from '../utils/enlaces'
 
-
+const carpeta = '/img/cursos/'
 export interface Modulo {
   titulo: string
   temas: string[]
@@ -20,18 +20,18 @@ export interface Instructor {
 export interface Curso {
   id: number
   titulo: string
-  categoria: IdCategoria                          
-  nivel: 'Básico' | 'Intermedio' | 'Avanzado'    
+  categoria: IdCategoria                         
+  nivel: 'Básico' | 'Intermedio' | 'Avanzado'     
   horas: number
   semanas: number
-  precio: number                                 
+  precio: number                                  
   fechaInicio: string
   alumnos: number
-  calificacion: number                            
+  calificacion: number                           
   popular: boolean                                
-  imagen: string
+  imagen: string                                  
   resumen: string                                 
-  descripcion: string                            
+  descripcion: string                             
   dirigidoA: string
   aprenderas: string[]
   requisitos: string[]
@@ -40,7 +40,6 @@ export interface Curso {
   video?: string                                  
   materiales: Material[]
 }
-
 
 export const cursos: Curso[] = [
   {
@@ -55,7 +54,7 @@ export const cursos: Curso[] = [
     alumnos: 1840,
     calificacion: 4.9,
     popular: true,
-    imagen: foto('photo-1461749280684-dccba630e2f6'),
+    imagen: carpeta + 'prograJPG.jpg',
     resumen: 'Construye interfaces reactivas con componentes, rutas y tipado.',
     descripcion:
       'Aprenderás a crear aplicaciones web modulares: cada parte de la página es un componente reutilizable que recibe datos (props), avisa lo que pasa (emits) y se muestra en su propia ruta. Al terminar tendrás un proyecto publicado en GitHub.',
@@ -99,7 +98,7 @@ export const cursos: Curso[] = [
     alumnos: 3210,
     calificacion: 4.8,
     popular: false,
-    imagen: foto('photo-1507721999472-8ed4421c4af2'),
+    imagen: carpeta + 'htmlpng.png',
     resumen: 'Estructura y estiliza páginas responsivas con Flexbox y Grid.',
     descripcion:
       'Dominarás las etiquetas esenciales de HTML5 y las bases de CSS para que tus páginas se vean bien en cualquier pantalla. Es el punto de partida ideal si nunca has programado.',
@@ -141,7 +140,7 @@ export const cursos: Curso[] = [
     alumnos: 1525,
     calificacion: 4.8,
     popular: true,
-    imagen: foto('photo-1518770660439-4636190af475'),
+    imagen: carpeta + 'linuxjpeg.jpg',
     resumen: 'Gestiona servidores: usuarios, permisos, servicios y automatización.',
     descripcion:
       'Trabajarás desde la terminal para instalar, configurar y mantener un servidor Linux como los que se usan en empresas reales. Cada módulo termina con una práctica en una máquina virtual.',
@@ -183,7 +182,7 @@ export const cursos: Curso[] = [
     alumnos: 2030,
     calificacion: 4.7,
     popular: true,
-    imagen: foto('photo-1558494949-ef010cbdcc31'),
+    imagen: carpeta + 'basesdedatosjpeg.jpeg',
     resumen: 'Diseña bases de datos y consúltalas con SQL de forma eficiente.',
     descripcion:
       'Del modelo relacional a las consultas con JOIN: aprenderás a guardar información de forma ordenada y a obtener respuestas de ella. Trabajarás con una base de datos de una tienda real.',
@@ -224,7 +223,7 @@ export const cursos: Curso[] = [
     alumnos: 1760,
     calificacion: 4.8,
     popular: true,
-    imagen: foto('photo-1563986768609-322da13575f3'),
+    imagen: carpeta + 'ciberseguridadjpeg.jpeg',
     resumen: 'Identifica riesgos y protege datos, cuentas e infraestructura.',
     descripcion:
       'Conocerás las amenazas más comunes y las prácticas para prevenirlas, detectarlas y responder a un incidente. Ideal para cualquier persona que maneje información sensible.',
@@ -265,7 +264,7 @@ export const cursos: Curso[] = [
     alumnos: 1380,
     calificacion: 4.7,
     popular: true,
-    imagen: foto('photo-1552664730-d307ca884978'),
+    imagen: carpeta + 'gestiontijpeg.jpg',
     resumen: 'Planea, prioriza y entrega proyectos de tecnología con Scrum.',
     descripcion:
       'Aprenderás a organizar un equipo, priorizar el trabajo y entregar valor en ciclos cortos. Simularás un proyecto completo desde la primera reunión hasta la entrega.',
@@ -306,7 +305,7 @@ export const cursos: Curso[] = [
     alumnos: 860,
     calificacion: 4.6,
     popular: false,
-    imagen: foto('photo-1555949963-ff9fe0c870eb'),
+    imagen: carpeta + 'pruebasdesoftjpeg.jpg',
     resumen: 'Diseña casos de prueba y asegura la calidad antes de liberar.',
     descripcion:
       'Verás cómo planear pruebas, documentar defectos y comprobar que el software cumple lo que se prometió, antes de que llegue a las manos del usuario.',
@@ -323,7 +322,7 @@ export const cursos: Curso[] = [
       bio: 'Responsable de calidad en una empresa de software educativo.',
       foto: avatar(44),
     },
-    // Este  no tiene video.
+    // Este curso no tiene video (el campo "video" es opcional)
     materiales: [
       { titulo: 'La pirámide de pruebas', tipo: 'documento', url: 'https://martinfowler.com/articles/practical-test-pyramid.html' },
     ],
@@ -340,7 +339,7 @@ export const cursos: Curso[] = [
     alumnos: 640,
     calificacion: 4.6,
     popular: false,
-    imagen: foto('photo-1551434678-e076c223a692'),
+    imagen: carpeta + 'gestiondeserviciosjpeg.jpg',
     resumen: 'Administra el catálogo, la mesa de ayuda y la mejora continua.',
     descripcion:
       'Entenderás cómo una organización ofrece, mide y mejora sus servicios de tecnología, desde la mesa de ayuda hasta los acuerdos de nivel de servicio.',
@@ -374,7 +373,7 @@ export const cursos: Curso[] = [
     alumnos: 2890,
     calificacion: 4.9,
     popular: false,
-    imagen: foto('photo-1515879218367-8466d910aaa4'),
+    imagen: carpeta + 'githubJPEG.jpg',
     resumen: 'Versiona tu código y colabora con ramas y repositorios remotos.',
     descripcion:
       'Aprenderás el flujo de trabajo que usan los equipos de desarrollo para no perder ni pisar el trabajo de nadie. Al final subirás tu primer proyecto a GitHub.',
@@ -409,7 +408,7 @@ export const cursos: Curso[] = [
     alumnos: 1120,
     calificacion: 4.7,
     popular: false,
-    imagen: foto('photo-1544197150-b99a580bb7a8'),
+    imagen: carpeta + 'redesJPEG.jpg',
     resumen: 'Comprende redes locales, direccionamiento y servicios de Internet.',
     descripcion:
       'Verás cómo viajan los datos entre equipos, cómo se asignan las direcciones IP y en qué se diferencian Internet, intranet y extranet.',

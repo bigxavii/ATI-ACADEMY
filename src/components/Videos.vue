@@ -3,14 +3,10 @@ import { ref } from 'vue'
 import { cursos } from '../interfaces/Curso'
 import { miniatura, videoEmbebido } from '../utils/enlaces'
 
-// Tomamos los cursos populares que tienen video y nos quedamos con los 3 primeros.
-// c.video !== undefined  → true solo si el curso tiene la propiedad opcional "video".
-// .slice(0, 3) devuelve los elementos de la posición 0 a la 2 (tres en total).
+// tomamos los populares con video nos quedamos con los 3 primeros.
 const conVideo = cursos.filter((c) => c.popular && c.video !== undefined).slice(0, 3)
 
-// Para que la página cargue rápido NO cargamos los reproductores de YouTube al inicio.
-// Primero se ve solo la miniatura (una imagen). Al hacer clic guardamos aquí el id
-// de ese curso, y el v-if del template cambia la imagen por el reproductor.
+// Para que la página cargue rápido NO se cargan los reproductores de YouTube al inicio.
 const reproduciendo = ref<number | null>(null)
 </script>
 
@@ -25,10 +21,7 @@ const reproduciendo = ref<number | null>(null)
 
       <div class="grid">
         <figure v-for="c in conVideo" :key="c.id">
-          <!-- v-if / v-else: si este video es el que se está reproduciendo, se muestra el iframe;
-               si no, se muestra un botón con la miniatura.
-               c.video! → el signo ! le dice a TypeScript "aquí seguro existe el video"
-               (ya lo comprobamos con el filter de arriba). -->
+          <!-- Filtro para reporduccion -->
           <iframe v-if="reproduciendo === c.id" :src="videoEmbebido(c.video!)" :title="'Video de ' + c.titulo"
             allow="autoplay; encrypted-media" allowfullscreen></iframe>
           <button v-else type="button" class="miniatura" @click="reproduciendo = c.id">

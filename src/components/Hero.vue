@@ -2,7 +2,7 @@
 import { cursos } from '../interfaces/Curso'
 import { certificaciones } from '../interfaces/Certificacion'
 import { empresas } from '../interfaces/Empresa'
-import { foto } from '../utils/enlaces'
+
 
 
 // Si se agrega un curso o una empresa, el número cambiara solo.
@@ -11,7 +11,8 @@ const cifras = [
   { valor: certificaciones.length, texto: 'certificaciones' },
   { valor: empresas.length, texto: 'empresas afiliadas' },
 ]
-const imagenBanner = foto('photo-1522202176988-66273c2fd55f', 1400)
+
+const imagenBanner = '/img/cursos/bannerheropng.png'
 </script>
 
 <template>
